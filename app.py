@@ -140,3 +140,6 @@ def main(argv=None):
     print(f"Đã bỏ {sum(rejected.values())} dòng không hợp lệ.")
     for reason, count in sorted(rejected.items()):
         print(f"  {reason}: {count}")
+
+    if __name__ == "__main__":
+        main()
