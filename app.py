@@ -77,8 +77,8 @@ def clean_record(raw):
         "note": raw.get("note") or None,
     }
 
-def ensure_database():
-    with sqlite3.connect(DB_FILE) as conn:
+def ensure_database(db_file):
+    with sqlite3.connect(db_file) as conn:
         conn.execute("""CREATE TABLE IF NOT EXISTS expenses (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             date TEXT NOT NULL,
